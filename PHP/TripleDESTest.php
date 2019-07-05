@@ -9,7 +9,7 @@
 
 header("Content-Type: text/html; charset=UTF-8");
 
-class MagicCrypt
+class TripleDES
 {
     private $iv = "00000000";// ECB 模式被忽略.
 
@@ -59,7 +59,7 @@ class MagicCrypt
 }
 
 $encryptString = '测试加密';
-$encryptObj = new MagicCrypt();
+$encryptObj = new TripleDES();
 
 $result = $encryptObj->encrypt($encryptString);//加密结果
 $decryptString = $decryptString = $encryptObj->decrypt($result);//解密结果
